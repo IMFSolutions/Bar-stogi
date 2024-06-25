@@ -30,6 +30,11 @@
   label{
     @apply text-white text-sm uppercase font-normal block mb-2;
   }
+  button{
+    border: 1px solid #e5e7eb; 
+    background-color: #1f5da8;
+    color: #ffffff; 
+  }
   .active{
     @apply text-orange
   }
