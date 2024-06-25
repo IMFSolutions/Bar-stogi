@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <div className={`${lora.variable} ${poppins.variable}`}>
       <Head>
-        <title>Tytuł Twojej Strony</title>
+        <title>Restauracja Plaża Stogi</title>
         {/* Można tutaj dodać inne meta tagi, favicony itd. */}
       </Head>
       <Component {...pageProps} />
