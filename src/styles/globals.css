@@ -21,6 +21,9 @@
   h3{
     @apply text-[20px] leading-[30px];
   }
+  h4{
+    @apply text-[16px] leading-[30px];
+  }
   p{
     @apply text-black/80 leading-8 font-poppins;
   }

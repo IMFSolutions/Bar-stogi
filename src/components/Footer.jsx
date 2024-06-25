@@ -27,55 +27,49 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-5">Kontakt</h4>
               <ul className="flex flex-col gap-y-6 text-sm">
-                <li>
-                  <Link href="/">503 005 728</Link>
-                </li>
-                <li>
-                  <Link href="/"> Wydmy 1, 80-656 Gdańsk</Link>
-                </li>
-                <li>
-                  <Link href="/">LINK22222222222222222222</Link>
-                </li>
-                <li>
-                  <Link href="/">LINKKKKKKKKKKKKKKKKKKKKK</Link>
-                </li>
+                <h4>
+                  503 005 728
+                </h4>
+                <h4>
+                   Wydmy 1, 80-656 Gdańsk
+                </h4>
+                <h4>
+                  plaza.sc@wp.pl
+                </h4>
               </ul>
             </div>
             {/* item */}
             <div>
               <h4 className="font-semibold mb-5">Godziny otwarcia</h4>
               <ul className="flex flex-col gap-y-6 text-sm">
-                <li>
-                  <Link href="/">Poniedziałek - Niedziela</Link>
-                </li>
-                <li>
-                  <Link href="/">10:00-21:00</Link>
-                </li>
-                <li>
-                  <Link href="/">LINK22222222222222222222</Link>
-                </li>
-                <li>
-                  <Link href="/">LINKKKKKKKKKKKKKKKKKKKKK</Link>
-                </li>
+                <h4>
+                  Poniedziałek - Piątek
+                </h4>
+                <h4>
+                  11:00-21:00
+                </h4>
+                <h4>
+                  Sobota - Niedziela
+                </h4>
+                <h4>
+                  10:00-21:00
+                </h4>
               </ul>
             </div>
             {/* socials */}
             <div>
               <h4 className="font-semibold mb-5"> Nasze social-media</h4>
               <ul className="flex flex-col gap-y-6 text-sm">
-                <li>
-                  <Link href="/">Facebook</Link>
-                </li>
-                <li>
-                  <Link href="/">Instagram</Link>
-                </li>
+                <h4>
+                  Facebook
+                </h4>
               </ul>
             </div>
           </div>
         </div>
         {/* copyright */}
         <div className="py-4 border-t border-white/10">
-            <p className="text-black/60 text-center text-sm"> Copyright &copy; Restauracja Plaża Stogi</p>
+            <p className="text-black/60 text-center text-sm"> Copyright 2024 &copy; Restauracja Plaża Stogi</p>
         </div>
       </div>
     </motion.footer>

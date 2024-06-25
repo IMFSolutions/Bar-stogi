@@ -5,6 +5,7 @@ import Nav from "../components/Nav";
 import NavMobile from "../components/NavMobile";
 import { Button } from "../components/ui/button";
 import Logo from "../components/Logo";
+import NavMobileAboutUs from "./NavMobileAboutUs";
 
 const HeaderAboutUs = () => {
   const [active, setActive] = useState(false);
@@ -43,7 +44,7 @@ const HeaderAboutUs = () => {
             
           </Link>
 
-          <NavMobile
+          <NavMobileAboutUs
             containerStyles="xl:hidden"
             iconStyles="text-3xl"
             linkStyles="uppercase"
