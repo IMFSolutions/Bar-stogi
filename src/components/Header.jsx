@@ -42,7 +42,7 @@ const Header = () => {
 
           {/* Nav bar */}
           <Nav
-            containerStyles="hidden xl:flex gap-x-12 text-white"
+            containerStyles="hidden xl:flex gap-x-12 text-white font-poppins"
             linkStyles="capitalize"
           />
 
@@ -55,7 +55,7 @@ const Header = () => {
 
           {/* mobile nav bar */}
           <NavMobile
-            containerStyles="xl:hidden"
+            containerStyles="xl:hidden font-poppins"
             iconStyles="text-3xl"
             linkStyles="uppercase"
           />
