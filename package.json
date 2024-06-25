@@ -24,6 +24,7 @@
     "react-day-picker": "^8.10.1",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "react-lazy-load-image-component": "^1.6.2",
     "react-leaflet": "^4.2.1",
     "react-photo-album": "^2.4.1",
     "react-responsive": "^10.0.0",

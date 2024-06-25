@@ -1,4 +1,7 @@
+import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import PhotoAlbum from "react-photo-album";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const photos = [
   { src: "gallery/IMG_5157.jpg", width: 800, height: 600 },
@@ -30,13 +33,32 @@ const photos = [
   { src: "gallery/IMG_8377.jpg", width: 800, height: 600 },
   { src: "gallery/IMG_8378.jpg", width: 800, height: 600 },
   { src: "gallery/IMG_8381.jpg", width: 800, height: 600 },
-  { src: "gallery/IMG_8382.jpg", width: 800, height: 600 }
+  { src: "gallery/IMG_8382.jpg", width: 800, height: 600 },
 ];
+
+const CustomImageComponent = ({ photo, imageProps }) => (
+  <LazyLoadImage
+    alt={photo.alt}
+    effect="blur"
+    src={photo.src}
+    width={imageProps.style.width}
+    height={imageProps.style.height}
+    style={{
+      ...imageProps.style,
+      width: "100%", 
+      height: "auto", 
+    }}
+  />
+);
 
 export default function Gallery() {
   return (
-  <section className = "bg-hero bg-no-repeat relative xl:bg-cover xl:h-[1098px] py-4 pb-32 xl:py-40">
-    <PhotoAlbum layout="rows" photos={photos} />
-  </section>
+    <section className="bg-hero bg-no-repeat relative xl:bg-cover xl:h-[1098px] py-4 pb-32 xl:py-40">
+      <PhotoAlbum
+        layout="rows"
+        photos={photos}
+        renderPhoto={CustomImageComponent}
+      />
+    </section>
   );
 };
