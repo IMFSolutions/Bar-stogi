@@ -20,7 +20,7 @@ const About = () => {
         viewport={{ once: false, amount: 0.2 }}
         className="xl:pl-[135px]"
       >
-        <h1 className="mb-9 ">
+        <h1 className="mb-9 text-5xl xl:text-7xl">
           Restauracja Plaża Stogi zaprasza wszystkich plażowiczów!
         </h1>
         <p className="mb-4 text-justify p-8">
