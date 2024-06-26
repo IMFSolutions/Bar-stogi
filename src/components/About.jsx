@@ -20,7 +20,7 @@ const About = () => {
         viewport={{ once: false, amount: 0.2 }}
         className="xl:pl-[135px]"
       >
-        <h1 className="mb-9">
+        <h1 className="mb-9 ">
           Restauracja Plaża Stogi zaprasza wszystkich plażowiczów!
         </h1>
         <p className="mb-4 text-justify p-8">
@@ -37,9 +37,18 @@ const About = () => {
           tańczyć do białego rana przy rytmach ulubionej muzyki. To idealne
           miejsce na zakończenie dnia pełnego wrażeń.
         </p>
-        <Link href="/about-details" passHref>
-          <Button as="a">Zobacz galerię!</Button>
-        </Link>
+        <Image
+          src="/gallery/IMG_5157.jpg"
+          width={705}
+          height={771}
+          alt=""
+          className=" rounded-lg xl:hidden mb-6"
+        />
+        <div className=" flex justify-center xl:justify-normal"> 
+          <Link href="/about-details" passHref>
+            <Button as="a">Zobacz galerię!</Button>
+          </Link>
+        </div>
       </motion.div>
       {/* img */}
       <motion.div
@@ -53,7 +62,7 @@ const About = () => {
           width={705}
           height={771}
           alt=""
-          className="hidden xl:flex"
+          className="  rounded-lg hidden xl:flex"
         />
       </motion.div>
     </section>

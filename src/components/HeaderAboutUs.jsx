@@ -33,7 +33,7 @@ const HeaderAboutUs = () => {
           <Logo />
 
           <Nav
-            containerStyles="hidden xl:flex gap-x-12 text-white"
+            containerStyles="hidden xl:flex gap-x-12 text-white font-poppins"
             linkStyles="capitalize"
             isHomePage={false}
           />

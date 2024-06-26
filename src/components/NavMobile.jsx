@@ -1,15 +1,16 @@
-"use client";
 import React, { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { BiSolidFoodMenu } from "react-icons/bi";
 import { FaUsers, FaEnvelope } from "react-icons/fa";
 import { RiHomeFill, RiMenu2Line } from "react-icons/ri";
+import { AiFillPicture } from "react-icons/ai";
+
 
 import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import Logo from "./Logo"
+import Logo from "./Logo";
 
 const links = [
   {
@@ -31,14 +32,28 @@ const links = [
     offset: -50,
   },
   {
+    icon: <AiFillPicture />,
+    path: "about-details",
+    name: "Galeria",
+    offset: 0,
+    isExternal: true,
+  },
+  {
     icon: <RiHomeFill />,
     path: "contact",
     name: "Kontakt",
     offset: 0,
   },
+  
 ];
+
 const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsOpen(false); // Funkcja do zamknięcia NavMobile po kliknięciu w link
+  };
+
   return (
     <div className={`${containerStyles}`}>
       {/* nav trigger bttn */}
@@ -63,25 +78,35 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
           </div>
           {/* logo */}
           <Logo />
-          {/* <Link href="/">
-            <Image src="/logo.svg" width={90} height={36} alt="" />
-          </Link> */}
           {/* links */}
           <div className="flex flex-col gap-y-8">
-            {links.map((link, index) => {
-              return (
+            {links.map((link, index) =>
+              link.isExternal ? (
+                <Link
+                  key={index}
+                  href={`/${link.path}`}
+                  className={`${linkStyles}`}
+                  onClick={handleLinkClick} // Zamknięcie NavMobile po kliknięciu w link
+                >
+                  <div className="flex items-center gap-x-3">
+                    <div className={`${iconStyles}`}>{link.icon}</div>
+                    <div>{link.name}</div>
+                  </div>
+                </Link>
+              ) : (
                 <ScrollLink
                   key={index}
                   to={link.path}
                   offset={link.offset}
                   smooth={false}
                   className="flex items-center gap-x-3"
+                  onClick={handleLinkClick} // Zamknięcie NavMobile po kliknięciu w link
                 >
                   <div className={`${iconStyles}`}>{link.icon}</div>
                   <div className={`${linkStyles}`}>{link.name}</div>
                 </ScrollLink>
-              );
-            })}
+              )
+            )}
           </div>
           {/* bttn */}
           <ScrollLink to="reservation" smooth offset={-150}>

@@ -69,7 +69,8 @@ const Footer = () => {
         </div>
         {/* copyright */}
         <div className="py-4 border-t border-white/10">
-            <p className="text-black/60 text-center text-sm"> Copyright 2024 &copy; Restauracja Plaża Stogi</p>
+            <p className="text-black/60 text-center text-sm"> Copyright  &copy; Restauracja Plaża Stogi 2024</p>
+            <p className="text-black/60 text-center text-sm">by IMF Solutions</p>
         </div>
       </div>
     </motion.footer>

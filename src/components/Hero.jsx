@@ -16,7 +16,7 @@ const Hero = () => {
         {/*text i obrazek*/}
         <div className="flex items-center xl:h-[960px]">
           {/* {text} */}
-          <div className="w-full xl:max-w-[460px] text-center xl:text-left">
+          <div className="w-full  xl:max-w-[460px] text-center xl:text-left">
             <motion.h1
               variants={fadeIn("down", 0.2)}
               initial="hidden"
@@ -24,8 +24,16 @@ const Hero = () => {
               viewport={{ once: false, amount: 0.4 }}
               className="text-black mb-7"
             >
-              Restauracja Plaża Stogi <br /> 
+              Restauracja Plaża Stogi <br />
             </motion.h1>
+            <Image
+              src="/hero/ryba4.png"
+              width={400}
+              height={400}
+              alt=""
+              className="xl:hidden max-w-[350px] mx-auto rounded-lg"
+            />
+
             <motion.p
               variants={fadeIn("down", 0.4)}
               initial="hidden"
@@ -33,7 +41,7 @@ const Hero = () => {
               viewport={{ once: false, amount: 0.4 }}
               className="text-black font-semibold mb-7"
             >
-              by: <span className="text-orange">IMF Solutions</span>
+              {/* by: <span className="text-orange">IMF Solutions</span> */}
             </motion.p>
             <motion.p
               variants={fadeIn("down", 0.6)}

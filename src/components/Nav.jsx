@@ -18,32 +18,44 @@ const links = [
     offset: -150,
   },
   {
+    path: "about-details",
+    name: "Galeria",
+    isExternal: true,
+  },
+  {
     path: "contact",
     name: "Kontakt",
     offset: 0,
   },
+  
 ];
 
 const Nav = ({ containerStyles, linkStyles, isHomePage = true }) => {
   return (
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => (
-        isHomePage ? (
-          <ScrollLink
-            key={index}
-            to={link.path}
-            spy={true}
-            smooth={true}
-            offset={link.offset}
-            duration={500}
-            className={`${linkStyles}`}
-          >
-            {link.name}
-          </ScrollLink>
-        ) : (
-          <Link key={index} href={`/#${link.path}`} className={`${linkStyles}`}>
+        link.isExternal ? (
+          <Link key={index} href={`/${link.path}`} className={`${linkStyles}`}>
             {link.name}
           </Link>
+        ) : (
+          isHomePage ? (
+            <ScrollLink
+              key={index}
+              to={link.path}
+              spy={true}
+              smooth={true}
+              offset={link.offset}
+              duration={500}
+              className={`${linkStyles}`}
+            >
+              {link.name}
+            </ScrollLink>
+          ) : (
+            <Link key={index} href={`/#${link.path}`} className={`${linkStyles}`}>
+              {link.name}
+            </Link>
+          )
         )
       ))}
     </nav>
