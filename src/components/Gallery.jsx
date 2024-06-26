@@ -68,18 +68,9 @@ export default function Galleryy() {
               height={photo.height}
             >
               {({ ref, open }) => (
-                <img
-                  ref={ref}
-                  onClick={open}
-                  src={photo.src}
-                  alt={photo.alt}
-                  style={{
-                    ...imageProps.style,
-                    width: "100%", // Make the image fill the container width
-                    height: "auto", // Maintain aspect ratio
-                    cursor: "pointer",
-                  }}
-                />
+                <div ref={ref} onClick={open} style={{ cursor: "pointer" }}>
+                  <CustomImageComponent photo={photo} imageProps={imageProps} />
+                </div>
               )}
             </Item>
           )}
