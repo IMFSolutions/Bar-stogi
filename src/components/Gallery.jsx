@@ -2,6 +2,8 @@ import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import PhotoAlbum from "react-photo-album";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { Gallery, Item } from "react-photoswipe-gallery";
+import "photoswipe/dist/photoswipe.css";
 
 const photos = [
   { src: "gallery/IMG_5157.jpg", width: 800, height: 600 },
@@ -45,20 +47,44 @@ const CustomImageComponent = ({ photo, imageProps }) => (
     height={imageProps.style.height}
     style={{
       ...imageProps.style,
-      width: "100%", 
-      height: "auto", 
+      width: "100%", // Make the image fill the container width
+      height: "auto", // Maintain aspect ratio
     }}
   />
 );
 
-export default function Gallery() {
+export default function Galleryy() {
   return (
-    <section className="bg-hero bg-no-repeat relative xl:bg-cover xl:h-[1098px] py-4 pb-32 xl:py-40">
-      <PhotoAlbum
-        layout="rows"
-        photos={photos}
-        renderPhoto={CustomImageComponent}
-      />
+    <section className="bg-hero bg-no-repeat relative xl:bg-cover xl:h-[1490px] py-4 pb-32 xl:py-40">
+      <Gallery>
+        <PhotoAlbum
+          layout="masonry"
+          photos={photos}
+          renderPhoto={({ photo, imageProps }) => (
+            <Item
+              original={photo.src}
+              thumbnail={photo.src}
+              width={photo.width}
+              height={photo.height}
+            >
+              {({ ref, open }) => (
+                <img
+                  ref={ref}
+                  onClick={open}
+                  src={photo.src}
+                  alt={photo.alt}
+                  style={{
+                    ...imageProps.style,
+                    width: "100%", // Make the image fill the container width
+                    height: "auto", // Maintain aspect ratio
+                    cursor: "pointer",
+                  }}
+                />
+              )}
+            </Item>
+          )}
+        />
+      </Gallery>
     </section>
   );
-};
+}
