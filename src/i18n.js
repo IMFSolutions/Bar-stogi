@@ -25,7 +25,7 @@ const resources = {
       "Kontakt": "Contact",
       // Menu component translations
       "Szef kuchni poleca": "Chef's Recommendations",
-      "Pokaż menu": "Show menu",
+      "Pokaż całe menu": "Show whole menu",
       "Dorsz z frytkami i surówką": "Cod with fries and salad",
       "Łosoś z pieca": "Baked salmon",
       "De volaille z frytkami i surówką": "De volaille with fries and salad",
@@ -63,7 +63,7 @@ const resources = {
       "Kontakt": "Kontakt",
       // Menu component translations
       "Szef kuchni poleca": "Szef kuchni poleca",
-      "Pokaż menu": "Pokaż menu",
+      "Pokaż całe menu": "Pokaż całe menu",
       "Dorsz z frytkami i surówką": "Dorsz z frytkami i surówką",
       "Łosoś z pieca": "Łosoś z pieca",
       "De volaille z frytkami i surówką": "De volaille z frytkami i surówką",
