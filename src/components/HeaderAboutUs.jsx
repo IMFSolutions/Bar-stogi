@@ -6,8 +6,10 @@ import NavMobile from "../components/NavMobile";
 import { Button } from "../components/ui/button";
 import Logo from "../components/Logo";
 import NavMobileAboutUs from "./NavMobileAboutUs";
+import { useTranslation } from 'react-i18next';
 
 const HeaderAboutUs = () => {
+  const { t } = useTranslation();
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const HeaderAboutUs = () => {
 
           <Link href="/">
             
-              <Button size="sm">Kamerka Live</Button>
+              <Button size="sm">{t('Kamerka Live')}</Button>
             
           </Link>
 

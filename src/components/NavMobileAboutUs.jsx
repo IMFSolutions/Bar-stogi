@@ -4,8 +4,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { BiSolidFoodMenu } from "react-icons/bi";
 import { FaUsers, FaEnvelope } from "react-icons/fa";
 import { RiHomeFill, RiMenu2Line } from "react-icons/ri";
-import { Button } from "./ui/button";
-
+import { useTranslation } from "react-i18next";
 
 import Link from "next/link";
 import Logo from "./Logo";
@@ -14,26 +13,27 @@ const links = [
   {
     icon: <RiHomeFill />,
     path: "home",
-    name: "Strona główna",
+    nameKey: "Strona Główna",
   },
   {
     icon: <BiSolidFoodMenu />,
     path: "menu",
-    name: "Menu",
+    nameKey: "Menu",
   },
   {
     icon: <FaUsers />,
     path: "about",
-    name: "O nas",
+    nameKey: "O nas",
   },
   {
     icon: <FaEnvelope />,
     path: "contact",
-    name: "Kontakt",
+    nameKey: "Kontakt",
   },
 ];
 
 const NavMobileAboutUs = ({ containerStyles, iconStyles, linkStyles }) => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -65,13 +65,13 @@ const NavMobileAboutUs = ({ containerStyles, iconStyles, linkStyles }) => {
             {links.map((link, index) => (
               <Link key={index} href={`/#${link.path}`} className="flex items-center gap-x-3">
                 <div className={`${iconStyles}`}>{link.icon}</div>
-                <div className={`${linkStyles}`}>{link.name}</div>
+                <div className={`${linkStyles}`}>{t(link.nameKey)}</div>
               </Link>
             ))}
           </div>
           {/* button */}
            <Link href="/#reservation" className="flex items-center gap-x-3">
-            {/* <Button>Book a table</Button> */}
+            {/* <Button>{t('Book a table')}</Button> */}
           </Link> 
         </div>
       </aside>
