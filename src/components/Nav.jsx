@@ -1,42 +1,44 @@
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 const links = [
   {
     path: "home",
-    name: "Strona Główna",
+    nameKey: "Strona Główna",
     offset: -50,
   },
   {
     path: "menu",
-    name: "Menu",
+    nameKey: "Menu",
     offset: -50,
   },
   {
     path: "about",
-    name: "O nas",
+    nameKey: "O nas",
     offset: -150,
   },
   {
     path: "about-details",
-    name: "Galeria",
+    nameKey: "Galeria",
     isExternal: true,
   },
   {
     path: "contact",
-    name: "Kontakt",
+    nameKey: "Kontakt",
     offset: 0,
   },
-  
 ];
 
 const Nav = ({ containerStyles, linkStyles, isHomePage = true }) => {
+  const { t } = useTranslation();
+
   return (
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => (
         link.isExternal ? (
           <Link key={index} href={`/${link.path}`} className={`${linkStyles}`}>
-            {link.name}
+            {t(link.nameKey)}
           </Link>
         ) : (
           isHomePage ? (
@@ -49,11 +51,11 @@ const Nav = ({ containerStyles, linkStyles, isHomePage = true }) => {
               duration={500}
               className={`${linkStyles}`}
             >
-              {link.name}
+              {t(link.nameKey)}
             </ScrollLink>
           ) : (
             <Link key={index} href={`/#${link.path}`} className={`${linkStyles}`}>
-              {link.name}
+              {t(link.nameKey)}
             </Link>
           )
         )
@@ -63,3 +65,4 @@ const Nav = ({ containerStyles, linkStyles, isHomePage = true }) => {
 };
 
 export default Nav;
+

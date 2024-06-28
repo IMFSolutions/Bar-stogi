@@ -5,50 +5,50 @@ import { FaUsers, FaEnvelope } from "react-icons/fa";
 import { RiHomeFill, RiMenu2Line } from "react-icons/ri";
 import { AiFillPicture } from "react-icons/ai";
 
-
 import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Logo from "./Logo";
-
-const links = [
-  {
-    icon: <RiHomeFill />,
-    path: "home",
-    name: "Strona główna",
-    offset: 0,
-  },
-  {
-    icon: <BiSolidFoodMenu />,
-    path: "menu",
-    name: "Menu",
-    offset: 0,
-  },
-  {
-    icon: <FaUsers />,
-    path: "about",
-    name: "O nas",
-    offset: -50,
-  },
-  {
-    icon: <AiFillPicture />,
-    path: "about-details",
-    name: "Galeria",
-    offset: 0,
-    isExternal: true,
-  },
-  {
-    icon: <RiHomeFill />,
-    path: "contact",
-    name: "Kontakt",
-    offset: 0,
-  },
-  
-];
+import { useTranslation } from "react-i18next";
 
 const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
+
+  const links = [
+    {
+      icon: <RiHomeFill />,
+      path: "home",
+      name: t("Strona Główna"),
+      offset: 0,
+    },
+    {
+      icon: <BiSolidFoodMenu />,
+      path: "menu",
+      name: t("Menu"),
+      offset: 0,
+    },
+    {
+      icon: <FaUsers />,
+      path: "about",
+      name: t("O nas"),
+      offset: -50,
+    },
+    {
+      icon: <AiFillPicture />,
+      path: "about-details",
+      name: t("Galeria"),
+      offset: 0,
+      isExternal: true,
+    },
+    {
+      icon: <RiHomeFill />,
+      path: "contact",
+      name: t("Kontakt"),
+      offset: 0,
+    },
+  ];
 
   const handleLinkClick = () => {
     setIsOpen(false); // Funkcja do zamknięcia NavMobile po kliknięciu w link
