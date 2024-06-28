@@ -49,16 +49,16 @@ const Menu = () => {
           viewport={{ once: false, amount: 0.2 }}
           className="max-w-[570px] mx-auto text-center xl:text-right"
         >
-          <h2 className="mb-3">{t("Szef kuchni poleca")}</h2>
-          <a
+          <h1 className="mb-3">{t("Szef kuchni poleca")}</h1>
+          <h2
             href="menu-plaza.jpg"
             target="_blank"
             rel="noopener noreferrer"
             className="text-darkblue flex justify-center xl:justify-end items-center mb-16"
           >
-            {t("Pokaż menu")}
-            <IoIosArrowRoundForward className="text-3xl" />
-          </a>
+            {t("Pokaż całe menu")}
+            <IoIosArrowRoundForward className="text-5xl" />
+          </h2>
         </motion.div>
         {/* menu grid */}
         <motion.div
