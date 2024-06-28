@@ -6,7 +6,8 @@ import NavMobile from "../components/NavMobile";
 import { Button } from "../components/ui/button";
 import Logo from "../components/Logo";
 import NavMobileAboutUs from "./NavMobileAboutUs";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import Translator from "./Translator";
 
 const HeaderAboutUs = () => {
   const { t } = useTranslation();
@@ -39,13 +40,14 @@ const HeaderAboutUs = () => {
             linkStyles="capitalize"
             isHomePage={false}
           />
-
+          <div className="flex items-center gap-16 ">
           <Link href="/">
-            
-              <Button size="sm">{t('Kamerka Live')}</Button>
-            
+            <Button size="sm">{t("Kamerka Live")}</Button>
           </Link>
+          <Translator/>
 
+          </div>
+          
           <NavMobileAboutUs
             containerStyles="xl:hidden"
             iconStyles="text-3xl"
