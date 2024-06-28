@@ -50,15 +50,15 @@ const Menu = () => {
           className="max-w-[570px] mx-auto text-center xl:text-right"
         >
           <h1 className="mb-3">{t("Szef kuchni poleca")}</h1>
-          <h2
+          <a
             href="menu-plaza.jpg"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-darkblue flex justify-center xl:justify-end items-center mb-16"
+            className="text-darkblue flex justify-center xl:justify-end items-center mb-16 text-4xl font-semibold"
           >
             {t("Pokaż całe menu")}
             <IoIosArrowRoundForward className="text-5xl" />
-          </h2>
+          </a>
         </motion.div>
         {/* menu grid */}
         <motion.div
