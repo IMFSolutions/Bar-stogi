@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 
 import Link from "next/link";
 import Logo from "./Logo";
+import { Button } from "./ui/button";
 
 const links = [
   {
@@ -68,6 +69,11 @@ const NavMobileAboutUs = ({ containerStyles, iconStyles, linkStyles }) => {
                 <div className={`${linkStyles}`}>{t(link.nameKey)}</div>
               </Link>
             ))}
+          </div>
+          <div>
+            <Button size="sm">
+              {t('Kamerka Live')}
+            </Button>
           </div>
           {/* button */}
            <Link href="/#reservation" className="flex items-center gap-x-3">

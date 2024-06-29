@@ -107,6 +107,12 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
                 </ScrollLink>
               )
             )}
+            
+          </div>
+          <div>
+            <Button size="sm">
+              {t('Kamerka Live')}
+            </Button>
           </div>
           {/* bttn */}
           <ScrollLink to="reservation" smooth offset={-150}>

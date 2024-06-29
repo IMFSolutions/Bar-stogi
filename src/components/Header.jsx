@@ -52,7 +52,7 @@ const Header = () => {
           {/* button */}
           <div className="flex items-center gap-16 ">
           <ScrollLink to="reservation" smooth={true}>
-            <Button size="sm">
+            <Button className='hidden md:block' size="sm">
               {t('Kamerka Live')}
             </Button>
           </ScrollLink>

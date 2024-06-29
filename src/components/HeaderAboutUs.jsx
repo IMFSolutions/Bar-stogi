@@ -42,7 +42,7 @@ const HeaderAboutUs = () => {
           />
           <div className="flex items-center gap-16 ">
           <Link href="/">
-            <Button size="sm">{t("Kamerka Live")}</Button>
+            <Button className='hidden md:block' size="sm">{t("Kamerka Live")}</Button>
           </Link>
           <Translator/>
 
