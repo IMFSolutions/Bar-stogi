@@ -78,6 +78,44 @@ const resources = {
       "Kamerka Live":"Kamerka Live",
     },
   },
+  de: {
+    translation: {
+      // Hero component translations
+      "Restauracja Plaża Stogi": "Restaurant Stogi",
+      "Zapraszamy do nas na chwilę wytchnienia po pełnym dniu morskich atrakcji! Ciesz się wyśmienitą kuchnią oraz relaksującą atmosferą dla całej rodziny!":
+        "Willkommen bei uns, ein Moment der Entspannung nach einem vollen Tag voller Meeresattraktionen! Genießen Sie köstliche Küche und eine entspannende Atmosphäre für die ganze Familie!",
+      "Zobacz Menu": "Menü ansehen",
+      // About component translations
+      "Restauracja Plaża Stogi zaprasza wszystkich plażowiczów!":
+        "Das Strandrestaurant Stogi lädt alle Strandbesucher ein!",
+      "Usytuowani zaledwie 50 metrów od piaszczystej plaży, nasza restauracja jest idealnym miejscem na chwilę wytchnienia po dniu pełnym morskich atrakcji. Zapraszamy do odkrycia smaków, które zaspokoją nawet najbardziej wymagające podniebienia, w sercu turystycznego raju.":
+        "Nur 50 Meter vom Sandstrand entfernt, ist unser Restaurant der perfekte Ort zum Entspannen nach einem Tag voller Meeresattraktionen. Entdecken Sie Geschmacksrichtungen, die selbst die anspruchsvollsten Gaumen zufriedenstellen, im Herzen eines touristischen Paradieses.",
+      "Na terenie obiektu znajduje się wiele atrakcji dla dzieci, w tym plac zabaw i stoiska z lodami, które sprawią, że najmłodsi będą się doskonale bawić. Po zachodzie słońca, nasza restauracja zamienia się w miejsce pełne życia. Zapraszamy na wieczorne dyskoteki, gdzie można tańczyć do białego rana przy rytmach ulubionej muzyki. To idealne miejsce na zakończenie dnia pełnego wrażeń.":
+        "Auf dem Gelände gibt es viele Attraktionen für Kinder, darunter einen Spielplatz und Eisdielen, die dafür sorgen, dass die Kleinsten eine tolle Zeit haben. Nach Sonnenuntergang verwandelt sich unser Restaurant in einen lebhaften Ort. Kommen Sie zu unseren Abendpartys, wo Sie bis zum Morgengrauen zu den Rhythmen Ihrer Lieblingsmusik tanzen können. Es ist der perfekte Ort, um einen erlebnisreichen Tag zu beenden.",
+      "Zobacz galerię!": "Galerie ansehen!",
+      // Nav component translations
+      "Strona Główna": "Startseite",
+      "Menu": "Menü",
+      "O nas": "Über uns",
+      "Galeria": "Galerie",
+      "Kontakt": "Kontakt",
+      // Menu component translations
+      "Szef kuchni poleca": "Empfehlungen des Küchenchefs",
+      "Pokaż menu": "Menü anzeigen",
+      "Dorsz z frytkami i surówką": "Kabeljau mit Pommes und Salat",
+      "Łosoś z pieca": "Gebratener Lachs",
+      "De volaille z frytkami i surówką": "De volaille mit Pommes und Salat",
+      "Zupa rybna": "Fischsuppe",
+      //Footer translations
+      "Kontakt":"Kontakt",
+      "Godziny otwarcia":"Öffnungszeiten",
+      "Poniedziałek - Piątek": "Montag - Freitag",
+      "Sobota - Niedziela":"Samstag - Sonntag",
+      "Nasze social-media":"Unsere sozialen Medien",
+      //Header Button
+      "Kamerka Live":"Live-Kamera",
+    },
+  },
 };
 
 i18n.use(initReactI18next).init({
@@ -90,3 +128,4 @@ i18n.use(initReactI18next).init({
 });
 
 export default i18n;
+
