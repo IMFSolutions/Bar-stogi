@@ -81,7 +81,7 @@ const resources = {
   de: {
     translation: {
       // Hero component translations
-      "Restauracja Plaża Stogi": "Strandrestaurant Stogi",
+      "Restauracja Plaża Stogi": "Restaurant Stogi",
       "Zapraszamy do nas na chwilę wytchnienia po pełnym dniu morskich atrakcji! Ciesz się wyśmienitą kuchnią oraz relaksującą atmosferą dla całej rodziny!":
         "Willkommen bei uns, ein Moment der Entspannung nach einem vollen Tag voller Meeresattraktionen! Genießen Sie köstliche Küche und eine entspannende Atmosphäre für die ganze Familie!",
       "Zobacz Menu": "Menü ansehen",
